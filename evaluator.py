@@ -13,12 +13,12 @@ class Evaluator(object):
     
     
     def test(self):
-        gram = nonogram.Nonogram('small')
+        gram = nonogram.Nonogram('medium')
         sol = solver.Solver(gram)
         evaluation = sol.run()
         
         print "Evaluations: {}\nSolution:".format(gram.evaluationCount)
-        print evaluation['bestGenotype']
+        nonogram.printPhenotype(evaluation['bestGenotype'])
         
         
 Evaluator()
